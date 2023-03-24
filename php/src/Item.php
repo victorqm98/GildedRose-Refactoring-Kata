@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace GildedRose;
 
-final class Item implements \Stringable
+use Stringable;
+
+final class Item implements Stringable
 {
     public function __construct(
         public string $name,

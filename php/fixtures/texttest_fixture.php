@@ -18,18 +18,17 @@ $items = [
     new Item('Backstage passes to a TAFKAL80ETC concert', 15, 20),
     new Item('Backstage passes to a TAFKAL80ETC concert', 10, 49),
     new Item('Backstage passes to a TAFKAL80ETC concert', 5, 49),
-    // this conjured item does not work properly yet
     new Item('Conjured Mana Cake', 3, 6),
 ];
 
 $app = new GildedRose($items);
 
-$days = 2;
+$days = 30;
 if ((is_countable($argv) ? count($argv) : 0) > 1) {
     $days = (int) $argv[1];
 }
 
-for ($i = 0; $i < $days; $i++) {
+for ($i = 0; $i <= $days; $i++) {
     echo "-------- day ${i} --------" . PHP_EOL;
     echo 'name, sellIn, quality' . PHP_EOL;
     foreach ($items as $item) {
